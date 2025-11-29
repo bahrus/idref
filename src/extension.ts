@@ -5,7 +5,7 @@ export function activate(context: vscode.ExtensionContext) {
         ['html', 'htm', 'vue', 'svelte'],
         new HtmlForAttributeDefinitionProvider()
     );
-
+  //context
     context.subscriptions.push(provider);
 }
 

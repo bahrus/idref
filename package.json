@@ -1,0 +1,53 @@
+{
+  "name": "idref",
+  "version": "0.0.0",
+  "description": "Add id ref linkage in html files for vscode",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "publisher": "andersonbruceb",
+  "categories": [
+    "Other"
+  ],
+    "activationEvents": [
+    "onLanguage:html"
+  ],
+  "homepage": "https://github.com/bahrus/idref#readme",
+  "bugs": {
+    "url": "https://github.com/bahrus/idref/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrus/idref.git"
+  },
+  "license": "MIT",
+  "author": "Bruce B. Anderson <anderson.bruce.b@gmail.com>",
+  "main": "./out/extension.js",
+    "contributes": {
+    "configuration": {
+      "title": "idref",
+      "properties": {
+        "idref.attributes": {
+          "type": "array",
+          "default": [],
+          "description": "List of custom HTML attributes to treat as links",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "update": "ncu -u && npm install",
+    "deploy": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.106.1",
+    "@types/node": "^24.x",
+    "typescript": "^5.9.3"
+  }
+}
