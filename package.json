@@ -5,6 +5,7 @@
   "engines": {
     "vscode": "^1.60.0"
   },
+  "icon": "icon.png",
   "publisher": "andersonbruceb",
   "categories": [
     "Other"
