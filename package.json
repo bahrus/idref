@@ -1,6 +1,6 @@
 {
   "name": "idref",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Add id ref linkage in html files for vscode",
   "engines": {
     "vscode": "^1.60.0"
@@ -10,7 +10,7 @@
   "categories": [
     "Other"
   ],
-    "activationEvents": [
+  "activationEvents": [
     "onLanguage:html"
   ],
   "homepage": "https://github.com/bahrus/idref#readme",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "author": "Bruce B. Anderson <anderson.bruce.b@gmail.com>",
   "main": "./out/extension.js",
-    "contributes": {
+  "contributes": {
     "configuration": {
       "title": "idref",
       "properties": {
