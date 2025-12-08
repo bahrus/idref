@@ -1,6 +1,6 @@
 {
   "name": "idref",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add id ref linkage in html files for vscode",
   "engines": {
     "vscode": "^1.60.0"
