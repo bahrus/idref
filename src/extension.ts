@@ -17,7 +17,7 @@ class HtmlForAttributeDefinitionProvider implements vscode.DefinitionProvider {
     ): vscode.ProviderResult<vscode.Definition> {
         const config = vscode.workspace.getConfiguration('idref');
         const customAttributes: string[] = config.get('attributes', []);
-        const allAttributes = ['em-bower', 'for', ...customAttributes];
+        const allAttributes = ['em-bower', 'for', 'be-decked-with', ...customAttributes];
         const line = document.lineAt(position.line).text;
         const wordRange = document.getWordRangeAtPosition(position);
         

@@ -56,9 +56,9 @@ Click on `username` or `password` in the `for` attributes to navigate to their c
 
 This extension works out of the box with no configuration required.
 
-Current attributes supported:  `for`, `em-bower`.
+Current attributes supported:  `for`, `em-bower`, `be-decked-with`.
 
-To add your additional custo attributes:
+To add your additional custom attributes:
 
 Open VS Code settings (Ctrl+,)
 Search for "idref"
@@ -74,7 +74,7 @@ Click on the Add Item button.
 ### 0.0.1
 
 Initial release:
-- Go to Definition support for HTML `for` and `em-bower` attributes
+- Go to Definition support for HTML `for`, `em-bower` and `be-decked-with` attributes
 - Support for HTML, Vue, and Svelte files
 - Works with quoted and unquoted attribute values
 
