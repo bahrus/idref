@@ -24,23 +24,33 @@ class HtmlForAttributeDefinitionProvider implements vscode.DefinitionProvider {
         if (!wordRange) return null;
 
         for(const attr of allAttributes){
-            // Check if we're in a 'for' attribute
-            //const regex = /for\s*=\s*["']?(\w+)["']?/g;
-            //const regex = new RegExp(`${attr}\\s*=\\s*["']([^"']+)["']`, 'gi');
-            const regex = new RegExp(`${attr}\\s*=\\s*["']?(\\w+)["']?`, 'gi');
+            // Match attribute with value that can contain multiple space-separated IDs
+            const regex = new RegExp(`${attr}\\s*=\\s*["']([^"']+)["']`, 'gi');
             let match;
             
             while ((match = regex.exec(line)) !== null) {
-                const matchStart = match.index + match[0].indexOf(match[1]);
-                const matchEnd = matchStart + match[1].length;
+                const attrValue = match[1];
+                const attrValueStart = match.index + match[0].indexOf(attrValue);
                 
-                if (position.character >= matchStart && position.character <= matchEnd) {
-                    const targetId = match[1];
-                    return this.findElementById(document, targetId);
+                // Split the attribute value by spaces to get individual IDs
+                const ids = attrValue.split(/\s+/).filter(id => id.length > 0);
+                let currentPos = attrValueStart;
+                
+                // Check each ID to see if the cursor is on it
+                for (const id of ids) {
+                    console.log({id, ids});
+                    const idStart = line.indexOf(id, currentPos);
+                    const idEnd = idStart + id.length;
+                    
+                    if (position.character >= idStart && position.character <= idEnd) {
+                        console.log(`Found matching id: ${id}`);
+                        return this.findElementById(document, id);
+                    }
+                    
+                    currentPos = idEnd;
                 }
             }
         }
-
 
         return null;
     }
