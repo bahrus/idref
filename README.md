@@ -6,9 +6,11 @@ Navigate seamlessly from HTML attributes like  `for` attributes to their target 
 
 This extension adds "Go to Definition" functionality for HTML `for` attributes, allowing you to quickly jump from a `<label>` element's `for` attribute to the corresponding input element with a matching `id`.
 
+The extension also supports **multiple IDs** in a single attribute (space-separated), making it easy to navigate when an element references multiple target elements.
+
 ### Navigate with Ctrl+Click
 
-Simply **Ctrl+Click** (or **Cmd+Click** on Mac) on any value in a `for` attribute to jump directly to the element with that `id`.
+Simply **Ctrl+Click** (or **Cmd+Click** on Mac) on any value in a `for` attribute to jump directly to the element with that `id`. Works with single or multiple space-separated IDs.
 
 
 **Before:**
@@ -48,6 +50,19 @@ Simply **Ctrl+Click** (or **Cmd+Click** on Mac) on any value in a `for` attribut
 
 Click on `username` or `password` in the `for` attributes to navigate to their corresponding inputs.
 
+### Multiple IDs in a Single Attribute
+
+Attributes can also reference multiple space-separated IDs:
+
+```html
+<output for="input1 input2">Total</output>
+
+<input id="input1" type="number" value="10">
+<input id="input2" type="number" value="20">
+```
+
+Click on any ID in the `for` attribute (e.g., `input1` or `input2`) to jump to that specific element.
+
 ## Requirements
 
 - Visual Studio Code version 1.60.0 or higher
@@ -77,6 +92,7 @@ Initial release:
 - Go to Definition support for HTML `for`, `em-bower` and `be-decked-with` attributes
 - Support for HTML, Vue, and Svelte files
 - Works with quoted and unquoted attribute values
+- Support for multiple space-separated IDs in a single attribute
 
 ## Contributing
 
