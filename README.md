@@ -71,7 +71,7 @@ Click on any ID in the `for` attribute (e.g., `input1` or `input2`) to jump to t
 
 This extension works out of the box with no configuration required.
 
-Current attributes supported:  `for`, `em-bower`, `be-decked-with`.
+Current attributes supported:  `for`, `em-bower`, `be-decked-with`, `😶‍🌫️`, `be-inclusive` and `🥰`.
 
 To add your additional custom attributes:
 
