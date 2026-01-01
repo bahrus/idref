@@ -71,7 +71,7 @@ Click on any ID in the `for` attribute (e.g., `input1` or `input2`) to jump to t
 
 This extension works out of the box with no configuration required.
 
-Current attributes supported:  `for`, `em-bower`, `be-decked-with`, `😶‍🌫️`, `be-inclusive`, `🥰`, `be-imbued` and `🧧`.
+Current attributes supported: **HTML standard attributes:** `for`, `list`, `usemap`, `form`, `contextmenu`, `popovertarget`; **ARIA attributes:** `aria-labelledby`, `aria-describedby`, `aria-controls`, `aria-owns`, `aria-flowto`; **Custom attributes:** `em-bower`, `be-decked-with`, `😶‍🌫️`, `be-inclusive`, `🥰`, `be-imbued`, `🧧`.
 
 To add your additional custom attributes:
 
